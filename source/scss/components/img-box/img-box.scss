@@ -1,0 +1,23 @@
+@import "variables";
+
+.img-box {
+  display: block;
+  width: 630px;
+  height: 331px;
+  padding: $container-margin;
+  box-sizing: border-box;
+  background: url("../img/bg@1x.png");
+  border-radius: 25px;
+  
+  &__title {
+    @extend %arial-bold,
+            %font_big;
+    color: $black-2;
+  }
+
+  &__subtitle {
+    @extend %arial,
+            %font_small;
+    margin-top: 10px;
+  }
+}

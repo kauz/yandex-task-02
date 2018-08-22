@@ -1,0 +1,36 @@
+@import "variables";
+
+.icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+}
+
+.icon_inline {
+  display: inline-block;
+}
+
+.icon_temp {
+  background-image: url("../img/icon_temperature.svg");
+}
+
+.icon_tempc {
+  background-image: url("../img/icon_temperature_2.svg");
+}
+
+.icon_sun {
+  background-image: url("../img/icon_sun.svg");
+}
+
+.icon_sunc {
+  background-image: url("../img/icon_sun_2.svg");
+}
+
+.icon_cloud-drizzle {
+  background-image: url("../img/cloud-drizzle.svg");
+}
+
+.icon_scheduled {
+  background-image: url("../img/icon_scheduled.svg");
+}

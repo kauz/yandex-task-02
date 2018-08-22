@@ -1,0 +1,18 @@
+@import "variables";
+
+.col {
+
+  &_half {
+
+    &:first-of-type {
+      margin-right: 20px;
+    }
+  }
+
+  &__title {
+    @extend %arial-bold,
+            %font_middle;
+    margin-bottom: 3%;
+    color: $black-2;
+  }
+}

@@ -1,0 +1,25 @@
+@import "variables";
+
+.temp {
+  @extend %flex,
+          %align-center;
+  margin: 20px 0;
+
+
+  &__cell {
+    margin-right: 5%;
+  }
+
+  &__sup {
+    @extend %arial,
+            %font_small;
+    color: $gray-3;
+    margin: 10px 0;
+  }
+
+  &__digit {
+    @extend %arial-bold,
+    %font_sbig;
+    color: $black-2;
+  }
+}

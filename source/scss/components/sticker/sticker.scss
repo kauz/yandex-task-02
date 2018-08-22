@@ -1,0 +1,50 @@
+@import "variables";
+
+.sticker {
+  width: 200px;
+  height: 100px;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background: $gray-1;
+  cursor: pointer;
+  transition: background .3s, box-shadow .3s;
+
+  &:hover {
+    background: $white;
+    box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50);
+  }
+
+  &_lg {
+    height: 120px;
+
+    & .sticker__title {margin-top: 15%;}
+  }
+
+  &__icon {
+
+  }
+
+  &__title {
+    @extend %arial-bold,
+            %font_small;
+    margin-top: 10%;
+    color: $black-2;
+  }
+
+  &__sub {
+    @extend %arial,
+            %font_micro;
+    margin-top: 5%;
+    color: $gray-3;
+  }
+}
+
+.sticker-group {
+  @extend %flex;
+  flex-wrap: wrap;
+
+  & .sticker {
+    margin: 10px 10px 0 0;
+  }
+}

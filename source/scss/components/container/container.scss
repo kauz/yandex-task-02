@@ -1,0 +1,10 @@
+@import "variables";
+
+.container {
+  @extend %flex,
+          %flex-column,
+          %margin-center,
+          %max-width;
+  box-sizing: border-box;
+  padding: 0 $container-margin;
+}

@@ -1,0 +1,29 @@
+@import "variables";
+
+
+.nav {
+
+  &_bold {
+    @extend %arial-bold;
+  }
+  &_footer {
+    @extend %arial;
+  }
+
+
+  &__item {
+    display: inline-block;
+    margin-right: $nav__item_mright;
+    &:last-child {margin-right: 0}
+  }
+
+  &__link {
+    padding: 10px;
+    color: $nav__link_color;
+    opacity: 0.6;
+    &:hover,&:focus {
+      opacity: 1;
+    }
+  }
+
+}

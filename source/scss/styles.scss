@@ -1,4 +1,34 @@
-@import 'variables-global';
-@import 'reset';
+@import "variables-global";
+@import "reset";
 
-@import 'components/header/header';
+@import "components/col/col";
+@import "components/container/container";
+@import "components/footer/footer";
+@import "components/header/header";
+@import "components/icon/icon";
+@import "components/img-box/img-box";
+@import "components/logo/logo";
+@import "components/nav/nav";
+@import "components/row/row";
+@import "components/sticker/sticker";
+@import "components/temp/temp";
+
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  @extend %posr;
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-size: 16px;
+}
+
+.main {
+  margin-top: $header_min-height;
+  padding-bottom: 64px;
+}

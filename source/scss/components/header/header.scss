@@ -1,0 +1,15 @@
+@import "variables";
+
+.header {
+  @extend %flex,
+          %align-center,
+          %max-width,
+          %posf;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0 $container-margin;
+  min-height: $header_min-height;
+  top: 0;
+  background: $header_background;
+  box-shadow: 0 1px 0 0 $header_border-color;
+}
