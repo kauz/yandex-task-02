@@ -32,3 +32,27 @@ body {
   margin-top: $header_min-height;
   padding-bottom: 64px;
 }
+
+
+.tns-controls {
+  @extend %posa;
+  top: 0;
+  right: 0;
+
+  & button {
+    width: 7.7px;
+    height: 18.1px;
+    background: url("../img/arrow.png");
+    background-size: 100%;
+    border: 0;
+  }
+
+  & button[data-controls="prev"] {
+    margin-right: 20px;
+  }
+
+  & button[data-controls="next"] {
+    transform: rotate(180deg);
+  }
+
+}

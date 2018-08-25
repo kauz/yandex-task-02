@@ -2,13 +2,16 @@ var	gulp = require('gulp'),
     rename = require('gulp-rename'),
     del = require('del'),
     sass = require('gulp-sass'),
+    concat = require('gulp-concat'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
     cache = require('gulp-cache'),
     imagemin = require('gulp-imagemin'),
     runSequence = require('run-sequence'),
     cssnano = require('gulp-cssnano'),
-    //    babel = require("gulp-babel"),
+    browserify  = require('browserify'),
+    babelify    = require('babelify'),
+    source = require('vinyl-source-stream'),
     sourcemaps = require('gulp-sourcemaps');
 
 var reload = browserSync.reload;
@@ -29,7 +32,7 @@ gulp.task('default', ['build'], function (callback) {
 });
 
 gulp.task('build', function (callback) {
-    runSequence('clean:public', 'html', 'css', 'img',
+    runSequence('clean:public', 'html', 'css', 'js', 'img',
         callback
     )
 });
@@ -80,12 +83,14 @@ gulp.task('img', function(){
         .pipe(gulp.dest(params.out + '/img'))
 });
 
-// gulp.task('js', function(){
-//     return gulp.src(params.from + '/**/*.js')
-//         .pipe(sourcemaps.init())
-//         .pipe(sourcemaps.write('.'))
-//         .pipe(gulp.dest(params.out))
-// });
+gulp.task('js', function(){
+
+    return browserify({entries: params.from + '/js/app.js', debug: true})
+        .transform("babelify", { presets: ["es2015"] })
+        .bundle()
+        .pipe(source('app.js'))
+        .pipe(gulp.dest(params.out + "/js"));
+});
 
 
 // gulp.task('fonts', function() {

@@ -9,6 +9,10 @@
     }
   }
 
+  &_rel {
+    @extend %posr;
+  }
+
   &__title {
     @extend %arial-bold,
             %font_middle;
